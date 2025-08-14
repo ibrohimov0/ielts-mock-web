@@ -5,6 +5,7 @@ import { GetTests } from "../../../shared/api/getTests";
 import { useQuery } from "@tanstack/react-query"
 import EndModal from "../../endModal/model";
 import Button from "../../../shared/ui/button";
+import { CalculateAnswers } from "../../../features/calculateAnswers";
 
 export default function TestFetch() {
     const [answers, setAnswers] = useState({});
@@ -24,6 +25,7 @@ export default function TestFetch() {
 
     const handleSubmit = () => {
         setOpen(true)
+        CalculateAnswers({answers,data})
     }
     return (
         <div className="tests">
