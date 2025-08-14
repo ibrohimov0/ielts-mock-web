@@ -8,13 +8,23 @@ export default function TestFetch() {
         queryKey: ['tests'],
         queryFn: GetTests,
     });
-
+    
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message}</div>;
 
     return (
         <div className="tests">
-            tests
+            {data?.map((test,index) => (
+                <div key={index} className="test">
+                    <h2>{test.question}</h2>
+                    {test.options.map((opt,i) => (
+                        <label key={i}>
+                            <input type="radio" name={`question-${test._id}`} value={i} />
+                            {opt.text}
+                        </label>
+                    ))}
+                </div>
+            ))}
         </div>
     )
 }
