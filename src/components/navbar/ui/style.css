@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 10rem;
+    width: 100%;
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.navbar h1{
+    font-size: 2.5rem;
+}
+
+.navbar p{
+    font-size: 1.5rem;
+}
+
+@media(max-width: 800px){
+    .navbar{
+        padding: 1.3rem 3rem;
+    }
+    .navbar h1{
+        font-size: 1.7rem;
+    }
+    .navbar p{
+        font-size: 1.2rem;
+    }
+}

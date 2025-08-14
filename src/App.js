@@ -1,9 +1,12 @@
 import './App.css';
+import Navbar from './components/navbar/model';
+import TestPage from './pages/test/model';
 
 function App() {
   return (
     <div className="App">
-      ok
+      <Navbar />
+      <TestPage />
     </div>
   );
 }
