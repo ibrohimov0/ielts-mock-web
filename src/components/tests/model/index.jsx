@@ -10,6 +10,7 @@ import { CalculateAnswers } from "../../../features/calculateAnswers";
 export default function TestFetch() {
     const [answers, setAnswers] = useState({});
     const [isOpen, setOpen] = useState(false);
+    const [results, setResults] = useState(null);
 
     const { data, error, isLoading } = useQuery({
         queryKey: ['tests'],
@@ -24,8 +25,9 @@ export default function TestFetch() {
     }
 
     const handleSubmit = () => {
+        const calc = CalculateAnswers({answers,data})
+        setResults(calc)
         setOpen(true)
-        CalculateAnswers({answers,data})
     }
     return (
         <div className="tests">
@@ -35,7 +37,7 @@ export default function TestFetch() {
                     <h2>{test.question}</h2>
                     {test.options.map((opt, i) => (
                         <label key={i}>
-                            <input type="radio" name={`question-${index}`} value={index} checked={answers[index] === opt} onChange={() => handleChange(index, opt)} />
+                            <input type="radio" name={`question-${index}`} value={index} checked={answers[test._id] === i} onChange={() => handleChange(test._id, i)} />
                             {opt.text}
                         </label>
                     ))}
