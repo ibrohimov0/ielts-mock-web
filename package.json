@@ -37,17 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "Ielts Mock Web Site",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ibrohimov0/ielts-mock-web.git"
-  },
-  "author": "Abdulloh",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ibrohimov0/ielts-mock-web/issues"
-  },
-  "homepage": "https://github.com/ibrohimov0/ielts-mock-web#readme"
+  }
 }
