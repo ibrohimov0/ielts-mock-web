@@ -68,32 +68,6 @@
     background-color: #1e3a8a;
 }
 
-.tests button {
-    outline: none;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, #ef4f4f, #ff7b7b);
-    border: none;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s ease;
-}
-
-.tests button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(135deg, #ff6b6b, #ff4f4f);
-}
-
-.tests button:active {
-    transform: translateY(3px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-}
-
 
 @media(max-width: 800px) {
     .tests {
