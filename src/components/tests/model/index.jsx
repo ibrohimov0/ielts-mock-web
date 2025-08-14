@@ -1,11 +1,15 @@
-import getTests from "../../../shared/api/getTests"
 import "../ui/style.css"
+import { useQuery } from "@tanstack/react-query"
 
 export default function TestFetch() {
-    
-    return(
+    const { data, error, isLoading } = useQuery(['tests'], GetTests);
+
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error.message}</div>;
+
+    return (
         <div className="tests">
-            tests        
+            tests
         </div>
     )
 }

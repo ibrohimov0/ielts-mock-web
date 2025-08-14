@@ -1,8 +1,6 @@
 import { axiosInstance } from "./axiosInstance";
 
-export default function getTests() {
-    return axiosInstance.get("/tests").then(res => res.data).catch(err => {
-        console.error("Tests fetch error", err);
-        throw err
-    })
+export const GetTests = async() => {
+    const res = await axiosInstance.get('/tests');
+    return res.data;
 }
