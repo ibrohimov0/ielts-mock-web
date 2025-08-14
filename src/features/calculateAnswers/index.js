@@ -4,10 +4,10 @@ export const CalculateAnswers = ({ answers, data }) => {
     const wrongAnswers = [];
 
     data.forEach(test => {
-        const userChoiseIndex = answers[test._id]
+        const userChoiceIndex = answers[test._id]
         const correctIndex = test.options.findIndex(opt => opt.isCorrect)
 
-        if (userChoiseIndex === correctIndex) {
+        if (userChoiceIndex === correctIndex) {
             totalTrue++
         } else {
             totalWrong++
@@ -19,7 +19,7 @@ export const CalculateAnswers = ({ answers, data }) => {
         }
     });
 
-    const percentage = ((totalTrue / data.length) * 100).toFixed(2);
+    const percentage = ((totalTrue / data.length) * 100)
 
     return { totalTrue, totalWrong, percentage, wrongAnswers };
 }

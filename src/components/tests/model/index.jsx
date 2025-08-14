@@ -31,7 +31,7 @@ export default function TestFetch() {
     }
     return (
         <div className="tests">
-            <EndModal isOpen={isOpen} setOpen={setOpen} answers={answers}/>
+            <EndModal isOpen={isOpen} setOpen={setOpen} results={results}/>
             {data?.map((test, index) => (
                 <div key={index} className="test">
                     <h2>{test.question}</h2>
